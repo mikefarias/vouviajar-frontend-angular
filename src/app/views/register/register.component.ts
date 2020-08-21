@@ -1,3 +1,5 @@
+import { routes } from './../../app.routing';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Company } from './models/company';
 import { FormGroup } from '@angular/forms';
@@ -13,16 +15,14 @@ export class RegisterComponent implements OnInit{
   company = {} as Company;
   companies: Company[];
 
-  constructor(private service: RegisterService) {}
+  constructor(private router: Router, private service: RegisterService) {}
 
   ngOnInit() {
   }
 
   registerUserCompany(frm: FormGroup) {
-    this.service.postUserCompany(this.company).subscribe(response => {
-      this.companies.push(response);
-
-      frm.reset();
-    });
+    this.service.postUserCompany(this.company);
+    frm.reset();
+    this.router.navigate(['/login']);
   }
 }

@@ -20,7 +20,7 @@ export class RegisterService {
   }
 
   // salva um user
-  postUserCompany(company: Company): Observable<Company> {
+  postUserCompany(company: Company) {
       return this.httpClient.post<Company>(this.url, JSON.stringify(company), this.httpOptions)
         .pipe(
           retry(2),
