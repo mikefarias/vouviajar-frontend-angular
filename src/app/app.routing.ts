@@ -12,16 +12,16 @@ import { RegisterComponent } from './views/register/register.component';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full',
-  },
-  {
-    path: 'home',
     component: DefaultLayoutComponent,
     data: {
       title: 'Home'
-    }
-
+    },
+    children: [
+      {
+        path: 'viagem',
+        loadChildren: () => import('./views/travel/travel.module').then(m => m.TravelModule)
+      }
+    ]
   },
   {
     path: '404',
@@ -50,13 +50,6 @@ export const routes: Routes = [
     data: {
       title: 'Register Page'
     }
-  },
-  {
-    path: '',
-    component: DefaultLayoutComponent,
-    data: {
-      title: 'Home'
-    },
   },
   { path: '**', component: P404Component }
 ];

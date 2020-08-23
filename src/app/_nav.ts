@@ -7,7 +7,7 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Viagens',
-    url: '/viagem/colors',
+    url: '/viagem',
     icon: 'icon-drop'
   },
   {
