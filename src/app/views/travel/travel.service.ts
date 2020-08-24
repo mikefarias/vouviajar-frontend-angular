@@ -9,7 +9,7 @@ import { Travel } from './models/travel';
 })
 export class RegisterService {
 
-  url = 'http://192.168.0.102:8080/api/v1/register/user/company';
+  url = 'http://192.168.0.102:8080/api/v1/travel';
 
   // injetando o HttpClient
   constructor(private httpClient: HttpClient) { }
@@ -26,6 +26,11 @@ export class RegisterService {
           catchError(this.handleError)
         )
     }
+
+  getAllTravel(){
+    return this.httpClient.get<Array<Travel>>(this.url);
+  }
+
   // Manipulação de erros
   handleError(error: HttpErrorResponse) {
     let errorMessage = '';

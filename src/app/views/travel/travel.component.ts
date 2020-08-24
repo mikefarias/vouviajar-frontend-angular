@@ -18,6 +18,8 @@ export class TravelComponent implements OnInit{
   constructor(private router: Router, private service: RegisterService) {}
 
   ngOnInit() {
+    this.service.getAllTravel()
+      .subscribe(resposta => this.travels = resposta);
   }
 
   postTravel(frm: FormGroup) {

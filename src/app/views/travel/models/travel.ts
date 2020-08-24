@@ -1,3 +1,4 @@
 export interface Travel {
-  name: string;
+  title: string;
+  details: string;
 }
