@@ -22,6 +22,10 @@ export class TravelComponent implements OnInit{
       .subscribe(resposta => this.travels = resposta);
   }
 
+  navigateToTravelCreate(): void {
+    this.router.navigate(['/viagem/cadastrar'])
+  }
+
   postTravel(frm: FormGroup) {
     this.service.postTravel(this.travel);
     frm.reset();

@@ -1,3 +1,4 @@
+import { TravelPostComponent } from './components/travel/travel-post/travel-post.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 

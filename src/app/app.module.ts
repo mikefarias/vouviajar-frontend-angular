@@ -1,7 +1,6 @@
-import { TravelComponent } from './views/travel/travel.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
@@ -66,7 +65,8 @@ import { ChartsModule } from 'ng2-charts';
     P404Component,
     P500Component,
     LoginComponent,
-    RegisterComponent  ],
+    RegisterComponent
+  ],
   providers: [{
     provide: LocationStrategy,
     useClass: HashLocationStrategy
