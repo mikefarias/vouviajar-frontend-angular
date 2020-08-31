@@ -1,4 +1,3 @@
-import { routes } from '../../app.routing';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Travel } from './models/travel';
@@ -23,7 +22,7 @@ export class TravelComponent implements OnInit{
   }
 
   navigateToTravelCreate(): void {
-    this.router.navigate(['/viagem/cadastrar'])
+    this.router.navigate(['viagem/cadastrar'])
   }
 
   postTravel(frm: FormGroup) {

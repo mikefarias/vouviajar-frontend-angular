@@ -13,14 +13,10 @@ const routes: Routes = [
     },
     children: [
       {
-        path: '/viagem/cadastrar',
+        path: 'cadastrar',
         component: TravelPostComponent
       }
     ]
-  },
-  {
-    path: '/viagem/cadastrar',
-    component: TravelPostComponent
   }
 ];
 
