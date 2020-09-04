@@ -10,14 +10,13 @@ const routes: Routes = [
     component: TravelComponent,
     data: {
       title: 'Viagens'
-    },
-    children: [
-      {
-        path: 'cadastrar',
-        component: TravelPostComponent
-      }
-    ]
+    }
+  },
+  {
+    path: 'cadastrar',
+    component: TravelPostComponent
   }
+
 ];
 
 @NgModule({

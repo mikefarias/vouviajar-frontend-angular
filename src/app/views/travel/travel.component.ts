@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Travel } from './models/travel';
 import { FormGroup } from '@angular/forms';
 
-import { RegisterService } from './travel.service';
+import { TravelService } from './travel.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,7 +14,7 @@ export class TravelComponent implements OnInit{
   travel = {} as Travel;
   travels: Travel[];
 
-  constructor(private router: Router, private service: RegisterService) {}
+  constructor(private router: Router, private service: TravelService) {}
 
   ngOnInit() {
     this.service.getAllTravel()
@@ -25,9 +25,4 @@ export class TravelComponent implements OnInit{
     this.router.navigate(['viagem/cadastrar'])
   }
 
-  postTravel(frm: FormGroup) {
-    this.service.postTravel(this.travel);
-    frm.reset();
-    this.router.navigate(['']);
-  }
 }

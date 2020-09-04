@@ -7,7 +7,7 @@ import { Travel } from './models/travel';
 @Injectable({
   providedIn: 'root'
 })
-export class RegisterService {
+export class TravelService {
 
   url = 'http://192.168.0.102:8080/api/v1/travel';
 
